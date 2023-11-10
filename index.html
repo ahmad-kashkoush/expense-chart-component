@@ -13,6 +13,9 @@
     />
 
     <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <main class="container">
@@ -29,23 +32,36 @@
       <div class="week-info">
         <h2>Spending - Last 7 days</h2>
         <div class="bars">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+          <div class="day-bar">
+            <span class="bar active-bar" data-amount="52.36"></span>
+            <span class="day">mon</span>
+          </div>
+          <div class="day-bar">
+            <span class="bar" data-amount="52.36"></span>
+            <span class="day">tue</span>
+          </div>
+          <div class="day-bar">
+            <span class="bar" data-amount="52.36"></span>
+            <span class="day">wed</span>
+          </div>
+          <div class="day-bar">
+            <span class="bar" data-amount="52.36"></span>
+            <span class="day">thu</span>
+          </div>
+          <div class="day-bar">
+            <span class="bar" data-amount="52.36"></span>
+            <span class="day">fri</span>
+          </div>
+          <div class="day-bar">
+            <span class="bar" data-amount="52.36"></span>
+            <span class="day">sat</span>
+          </div>
+          <div class="day-bar">
+            <span class="bar" data-amount="52.36"></span>
+            <span class="day">sun</span>
+          </div>
         </div>
-        <div class="days">
-          <span class="day">mon</span>
-          <span class="day">tue</span>
-          <span class="day">wed</span>
-          <span class="day">thu</span>
-          <span class="day">fri</span>
-          <span class="day">sat</span>
-          <span class="day">sun</span>
-        </div>
+
         <!-- todo Add line-break using css -->
         <div class="month-info">
           <div class="overview">
