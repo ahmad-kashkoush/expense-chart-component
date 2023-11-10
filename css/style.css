@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap");
+:root {
+  /* Colors */
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+  /* font */
+  --font-size: 18px;
+  --font-family: "DM Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Cream);
+}
+.container {
+  background: transparent;
+  width: 360px;
+}
+@media (min-width: 500px) {
+  .container {
+    width: 500px;
+  }
+}
+.container .overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Soft-red);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  color: var(--Very-pale-orange);
+}
+.container .overview .info {
+}
+.container .overview .info h3 {
+  font-weight: 400;
+}
+.container .overview .info p {
+  font-weight: 700;
+  margin-top: 4px;
+  font-size: 28px;
+}
+.container .overview .right {
+}
+.container .overview .img-holder {
+}
+
+/* ********************* */
+.week-info {
+  background-color: var(--Very-pale-orange);
+  margin-top: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+}
+.week-info h2 {
+  color: var(--Dark-brown);
+}
+.week-info .bars {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--Cream);
+  display: flex;
+  gap: 10px;
+}
+
+.week-info .bars .day-bar {
+  width: 100%;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.week-info .bars .bar {
+  display: block;
+  position: relative;
+  --sz: 1rem;
+  margin-top: var(--sz);
+  height: calc(208px - var(--sz));
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+.week-info .bars .bar::after {
+  content: "";
+  width: 100%;
+  /* Update height with javascript */
+  height: var(--height);
+  position: absolute;
+  background: var(--Soft-red);
+  border-radius: inherit;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.week-info .bars .bar.active-bar::after {
+  background-color: var(--Cyan);
+}
+.week-info .bars .day-bar:hover .bar::after {
+  opacity: 0.6;
+}
+
+.week-info .bars .day-bar:hover .bar::before {
+  content: attr(data-amount);
+  background-color: var(--Dark-brown);
+  border-radius: inherit;
+  color: var(--Very-pale-orange);
+  position: absolute;
+  left: -5px;
+  top: -1px;
+
+  padding: 5px 3px;
+  font-size: 16px;
+}
+
+.week-info .bars .day {
+  color: var(--Medium-brown);
+}
+
+/* ********************* */
+.month-info {
+}
+.month-info .overview {
+  background-color: transparent;
+  padding: 0;
+  margin-top: 1.4rem;
+  color: var(--Dark-brown);
+  font-weight: 700;
+}
+.month-info .overview .info {
+}
+.month-info .overview h3 {
+  color: var(--Medium-brown);
+  font-weight: 400;
+  font-size: 18px;
+}
+.month-info .overview .info p {
+  margin-top: 7px;
+  font-size: 36px;
+}
+.month-info .overview .right {
+  text-align: end;
+  margin-top: 3rem;
+}
